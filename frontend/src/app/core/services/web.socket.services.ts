@@ -10,7 +10,7 @@ export class WebSocketService {
 
   constructor() {
     // Connect to the WebSocket server
-    this.socket = io('https://chart-backend-zr3e.onrender.com/api'); // Replace with your WebSocket server URL
+    this.socket = io('https://chart-backend-zr3e.onrender.com'); // Replace with your WebSocket server URL
   }
 
   public getSocket(): Socket {
