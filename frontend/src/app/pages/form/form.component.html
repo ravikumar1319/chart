@@ -1,0 +1,71 @@
+<div class="container text-center">
+
+
+    <form>
+        <div class="row justify-content-around ">
+            <div class="card col-md-4 col-12">
+                <h3 class="card-title">
+                    Graph Data of Population
+                </h3>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="First Data">Andhra Pradesh</label>
+                            <input type="number" [(ngModel)]="population.andhraPradesh" name="population.andhraPradesh"
+                                min="0">
+                        </div>
+                        <div class="col-12">
+                            <label for="First Data">Karnataka</label>
+                            <input type="number" [(ngModel)]="population.karnataka" name="population.karnataka" min="0">
+                        </div>
+                        <div class="col-12">
+                            <label for="First Data">Kerala</label>
+                            <input type="number" [(ngModel)]="population.kerala" name="population.kerala" min="0">
+                        </div>
+                        <div class="col-12">
+                            <label for="First Data">Tamil Nadu</label>
+                            <input type="number" [(ngModel)]="population.tamilNadu" name="population.tamilNadu" min="0">
+                        </div>
+                        <div class="col-12">
+                            <label for="First Data">Telangana</label>
+                            <input type="number" [(ngModel)]="population.telangana" name="population.telangana" min="0">
+                        </div>
+
+                    </div>
+                    <button type="button" class="primary" (click)="submit()">Submit</button>
+                </div>
+
+            </div>
+            <div class="card col-md-4 col-12">
+                <h3 class="card-title">
+                    Pie Data of Expense
+                </h3>
+                <div class="card-body">
+
+                    <div class="row">
+                        <div class="col-12">
+                            <label for="First Data">Travel</label>
+                            <input type="number" [(ngModel)]="expense.travel" name="expense.travel" min="0">
+                        </div>
+                        <div class="col-12">
+                            <label for="First Data">Food</label>
+                            <input type="number" [(ngModel)]="expense.food" name="expense.food" min="0">
+                        </div>
+                        <div class="col-12">
+                            <label for="First Data">Shopping</label>
+                            <input type="number" [(ngModel)]="expense.shopping" name="expense.shopping" min="0">
+                        </div>
+                        <div class="col-12">
+                            <label for="First Data">Rent</label>
+                            <input type="number" [(ngModel)]="expense.rent" name="expense.rent" min="0">
+                        </div>
+
+                    </div>
+                    <button type="button" class="primary" (click)="submitPie()">Submit</button>
+                </div>
+
+            </div>
+        </div>
+    </form>
+</div>

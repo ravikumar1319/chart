@@ -1,0 +1,6 @@
+@use "@angular/material" as mat;
+@import '../../../theme';
+
+h1 {
+    color: mat-color($frontend-primary)
+}

@@ -1,0 +1,97 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+@use "./_theme" as theme;
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+@include mat.all-component-themes(theme.$frontend-theme);
+@import "_theme.scss";
+
+/* Importing Bootstrap SCSS file. */
+@import 'bootstrap/scss/bootstrap';
+
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+    height: 100%;
+    max-width: 100vw;
+}
+
+body {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: mat-color($frontend-accent);
+    overflow-x: hidden;
+}
+
+label {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 18px;
+    width: 100%;
+    text-align: left;
+}
+
+input[type=submit],
+input[type=text],
+input[type=number] {
+    border: transparent;
+    border-bottom: 2px solid rgb(36, 34, 34,0.5);
+    background: transparent;
+    margin-bottom: 1em;
+    width: 100%;
+
+}
+
+input[type=submit]:focus,
+input[type=text]:focus,
+input[type=number]:focus {
+    border: transparent;
+    border-bottom: 2px solid mat-color($frontend-primary);
+    background: transparent;
+    outline: none;
+    transition: all 0.1s ease-in;
+}
+
+button {
+    padding: 0.5em 2.5em;
+    outline: none;
+    border: transparent;
+    border-radius: 5px;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    font-weight: bold;
+    letter-spacing: 1px;
+
+    &.primary {
+        background-color: mat-color($frontend-primary);
+        color: mat-color($frontend-accent)
+    }
+}
+
+button:hover {
+    box-shadow: none;
+    font-weight: bolder;
+    transition: all 0.2s ease-out;
+}
+
+
+
+.card-title {
+    padding: 0.5em;
+    text-align: left;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(to right, rgba(19, 18, 18,0.3), white) 2;
+}
+
+.card-body {
+    padding: 2em;
+
+}
